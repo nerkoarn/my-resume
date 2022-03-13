@@ -1,0 +1,557 @@
+<!-- U 9 satu zavrsio sam stilizaciju web stranice "contact", nakon toga prilagodio sam navigaciu i stranicu "contact" za mobilne uređaje i radio strukturu za web stranicu "Portfolio".   -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nermin Arnautovic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    :root {
+        --secondary-color: #CBAA82;
+        ;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Comfortaa', cursive;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        margin: 40px 0 40px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.5s ease-out;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 200px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 40px;
+        padding: 40px 0;
+
+    }
+
+    #active {
+        color: #CBAA82;
+    }
+
+    .btn:hover {
+        opacity: 0.7;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    hr {
+        margin: 0 60px;
+    }
+
+    .main-header {
+        background: url(https://pbs.twimg.com/media/E5Jm4L0XIAUyiqg?format=jpg&name=medium);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .header-div {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-div-text {
+        text-align: center;
+
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+        border: 2px solid var(--secondary-color);
+    }
+
+    .header-div-text h1 {
+        font-size: 45px;
+        color: var(--secondary-color);
+        margin: 30px 0px 30px 0px;
+    }
+
+    .section-one {
+        background-color: var(--secondary-color);
+    }
+
+    .section-one-div {
+        padding: 100px 0;
+    }
+
+    .section-one-div h2 {
+        text-align: center;
+        font-size: 45px;
+
+    }
+
+    .profile-div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 50px 80px;
+    }
+
+    .about-photo {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+
+    .signature {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+
+    .bio {
+        margin: 40px 0;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 0px 60px 0 30px;
+    }
+
+    .bio p {
+        text-align: justify;
+    }
+
+    #scl1 {
+        display: none;
+    }
+
+    .info {
+        display: flex;
+        margin: 50px 0 20px 0;
+    }
+
+    .info div {
+        width: 50%;
+    }
+
+    .info div p {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .education {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-top: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 40px 0 60px 0;
+    }
+
+    .edu-right {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 30px 0 0 30px;
+    }
+
+    .skills-name p {
+        margin-top: 10px;
+    }
+
+    .skills-percents div {
+        margin-top: 10px;
+    }
+
+    .percents {
+        background-color: rgba(0, 0, 0, 0.85);
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    #ms {
+        width: 60%;
+    }
+
+    #html {
+        width: 50%;
+    }
+
+    #css {
+        width: 50%;
+    }
+
+    #ps {
+        width: 30%;
+    }
+
+    #ill {
+        width: 30%;
+    }
+
+    .percents p {
+        margin-left: 40%;
+    }
+
+    footer {
+        background: url(https://i.pinimg.com/736x/e8/a1/b0/e8a1b035e0d456aae3537591943912ec.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+
+    }
+
+    small {
+        display: inline-block;
+        padding: 40px 0;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .icons {
+        padding: 30px 0;
+    }
+
+    .icons a {
+        margin-right: 15px;
+    }
+
+    .footer-div {
+        background-color: rgba(0, 0, 0, 0.90);
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .fa {
+        padding: 7px;
+        font-size: 17px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-linkedin {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+
+
+    @media (max-width: 360px) {
+        .container {
+            width: 100%;
+        }
+
+        body {
+            font-size: 13px;
+        }
+
+        .btn {
+            font-size: 13px;
+        }
+
+        .main-header {
+            background-position: center;
+        }
+
+        .header-div-text h1 {
+            font-size: 20px;
+        }
+
+        .profile-div {
+            display: grid;
+            grid-template-columns: 100%;
+            margin: 10px 10px;
+        }
+
+
+        .section-one-div {
+            padding: 30px 0;
+        }
+
+        .section-one-div h2 {
+            font-size: 25px;
+
+        }
+
+        .bio {
+            margin: 20px 0;
+            border-left: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 0px 10px 0 10px;
+        }
+
+        .info {
+            flex-wrap: wrap;
+            margin: 30px 0 20px 0;
+        }
+
+        .info div {
+            width: 100%;
+        }
+
+        .info div p {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .signature {
+            max-width: 120px;
+        }
+
+        .education {
+            display: grid;
+            grid-template-columns: 100%;
+            border-top: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 30px 0 30px 0;
+            margin: 0px 10px;
+        }
+
+        .education h3 {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .edu-right {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            padding: 10px 0 0 10px;
+        }
+
+        .footer-div {
+            grid-template-columns: 100%;
+        }
+
+        small {
+            padding-bottom: 15px;
+        }
+
+        .icons {
+            padding: 0 0 15px 0;
+        }
+
+        .icons a {
+            margin-right: 15px;
+        }
+
+        .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .menu a:nth-child(3) {
+        margin-right: 0;
+    }
+
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="menu">
+                <a id="active" href="#">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-header">
+        <div class="header-div">
+            <div class="header-div-text">
+                <img class="profile-photo" src="https://i.ibb.co/XCbKn5t/1.jpg" alt="profile-photo">
+                <h1>Hello! I'm Nermin</h1>
+                <hr>
+                <a class="btn" href="#profile">Let's meet</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-one" id="profile">
+        <div class="container">
+            <div class="section-one-div">
+                <h2>About me</h2>
+                <div class="profile-div">
+                    <div>
+                        <img class="about-photo" src="https://i.ibb.co/mBTYJr3/nermin.png" alt="about-photo">
+                    </div>
+                    <div class="bio">
+                        <p>I'm Nermin Arnautovic, a mining technician and student in the senior year at the Faculty of
+                            Occupational Safety.
+                            A fan of computers for years. I love web design and programming, so I took some
+                            online courses about basics of HTML and CSS. My desire is to become a successful software
+                            developer and I believe I will succeed. I am a team player but also my own creative.</p>
+                        <div class="info">
+                            <div>
+                                <p><strong>Birth:</strong> 29 May 1992</p>
+                                <p><strong>Adress:</strong> Banovići, Bosnia and Herzegovina</p>
+                            </div>
+                            <div>
+                                <p><strong>Phone:</strong> <a href="tel:+38762269652">+38762269652</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:nerko.arn@gmail.com">nerko.arn@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <img class="signature" src="https://i.ibb.co/Yd8Pf4G/POTPIS.png" alt="signature">
+                    </div>
+                </div>
+                <div class="education">
+                    <div>
+                        <h3>Education</h3>
+                    </div>
+                    <div>
+                        <div class="edu-right">
+                            <div>
+                                <p>2007 - 2011</p>
+                            </div>
+                            <div>
+                                <h4>Mjesovita srednja skola Banovici</h4>
+                                <p>Banovici, Bosnia and Herzegovina</p>
+                                <p><strong>Diploma:</strong> Mining technician</p>
+                            </div>
+                        </div>
+                        <div class="edu-right">
+                            <div>
+                                <p>2018 - </p>
+                            </div>
+                            <div>
+                                <h4>Visoka skola "CEPS-Centar za poslovne studije"</h4>
+                                <p>Kiseljak, Bosnia and Herzegovina</p>
+                                <p><strong>Diploma:</strong> Bachelor - Occupational safety engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education">
+                    <div>
+                        <h3>Work experiences</h3>
+                    </div>
+                    <div>
+                        <div class="edu-right">
+                            <div>
+                                <p>2011 - 2012</p>
+                            </div>
+                            <div>
+                                <h4>Disco Club Q&M</h4>
+                                <p>Banovici, Bosnia and Herzegovina</p>
+                                <p><strong>Position:</strong> Waiter</p>
+                            </div>
+                        </div>
+                        <div class="edu-right">
+                            <div>
+                                <p>2012 - </p>
+                            </div>
+                            <div>
+                                <h4>RMU "Banovici" d.d. Banovici</h4>
+                                <p>Banovici, Bosnia and Herzegovina</p>
+                                <p><strong>Position:</strong> Personal protective equipment technician</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education">
+                    <div>
+                        <h3>Skills</h3>
+                    </div>
+                    <div>
+                        <div class="edu-right">
+                            <div class="skills-name">
+                                <p>MS Office</p>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>Photoshop</p>
+                                <p>Illustrator</p>
+                            </div>
+                            <div class="skills-percents">
+                                <div class="percents" id="ms">
+                                    <p>60%</p>
+                                </div>
+                                <div class="percents" id="html">
+                                    <p>50%</p>
+                                </div>
+                                <div class="percents" id="css">
+                                    <p>50%</p>
+                                </div>
+                                <div class="percents" id="ps">
+                                    <p>30%</p>
+                                </div>
+                                <div class="percents" id="ill">
+                                    <p>30%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-div">
+            <div>
+                <small>&#169; 2022 By Nermin Arnautovic.</small>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/nermin.arn" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/nermin-arnautovic/" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

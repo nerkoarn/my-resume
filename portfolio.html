@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    :root {
+        --secondary-color: #CBAA82;
+        ;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Comfortaa', cursive;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        margin: 40px 0 40px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.5s ease-out;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 200px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 40px;
+        padding: 40px 0;
+
+    }
+
+    #active {
+        color: #CBAA82;
+    }
+
+    .btn:hover {
+        opacity: 0.7;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    hr {
+        margin: 0 60px;
+    }
+
+    .section-portfolio {
+        background-color: var(--secondary-color);
+        height: 80vh;
+    }
+
+    .section-portfolio-div {
+        margin-top: 80px;
+        padding: 100px 0;
+    }
+
+    .section-portfolio-div h2 {
+        text-align: center;
+        font-size: 45px;
+
+    }
+
+    footer {
+        background: url(https://i.pinimg.com/736x/e8/a1/b0/e8a1b035e0d456aae3537591943912ec.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+
+    }
+
+    small {
+        display: inline-block;
+        padding: 40px 0;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .icons {
+        padding: 30px 0;
+    }
+
+    .icons a {
+        margin-right: 15px;
+    }
+
+    .contact-info .icons {
+        margin-left: 30px;
+    }
+
+    .contact-info .icons .fa-facebook {
+        background-color: #4064AC;
+    }
+
+    .contact-info .icons .fa-linkedin {
+        background-color: #0E72A3;
+    }
+
+    .footer-div {
+        background-color: rgba(0, 0, 0, 0.90);
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .fa {
+        padding: 7px;
+        font-size: 17px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-linkedin {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-envelope:hover {
+        pointer-events: none;
+    }
+
+    @media (max-width: 360px) {
+
+        .container {
+            width: 100%;
+        }
+
+        body {
+            font-size: 13px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-right: 0;
+        }
+
+        .menu a {
+            margin-right: 20px;
+        }
+
+        .menu a:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .section-portfolio-div {
+            margin-top: 40px;
+            padding: 100px 0 30px 0;
+        }
+
+        .section-portfolio-div h2 {
+            font-size: 25px;
+
+        }
+
+        .footer-div {
+            grid-template-columns: 100%;
+        }
+
+        small {
+            padding-bottom: 15px;
+        }
+
+        .icons {
+            padding: 10px 0 10px 0;
+        }
+
+        .icons a {
+            margin-right: 15px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="menu">
+                <a href="index.html">About</a>
+                <a id="active" href="#">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-portfolio">
+        <div class="container">
+            <div class="section-portfolio-div">
+                <h2>Portfolio</h2>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer-div">
+            <div>
+                <small>&#169; 2022 By Nermin Arnautovic.</small>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/nermin.arn" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/nermin-arnautovic/" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+    </footer>
+</body>

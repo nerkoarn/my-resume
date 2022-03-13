@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    :root {
+        --secondary-color: #CBAA82;
+        ;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Comfortaa', cursive;
+        line-height: 1.8;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: var(--secondary-color);
+        margin: 40px 0 40px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.5s ease-out;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 200px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 40px;
+        padding: 40px 0;
+
+    }
+
+    #active {
+        color: #CBAA82;
+    }
+
+    .btn:hover {
+        opacity: 0.7;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    hr {
+        margin: 0 60px;
+    }
+
+    .section-contact {
+        background-color: var(--secondary-color);
+    }
+
+    .section-contact-div {
+        margin-top: 80px;
+        padding: 100px 0;
+    }
+
+    .section-contact-div h2 {
+        text-align: center;
+        font-size: 45px;
+
+    }
+
+    .form-div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-bottom: 100px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type=text],
+    input[type=email],
+    #textarea {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px auto;
+        border: 1px solid rgba(0, 0, 0, 0.90);
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.25);
+        font-family: 'Comfortaa', cursive;
+        font-size: 12px;
+
+    }
+
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.95);
+    }
+
+    .contact-info {
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        padding: 0px 30px 0 30px;
+    }
+
+    .contact-info div i {
+        font-size: 36px;
+        margin: 25px;
+    }
+
+    button {
+        width: 76%;
+        padding: 12px 20px;
+        margin: 8px auto;
+        font-family: 'Comfortaa', cursive;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-color: rgba(0, 0, 0, 0.95);
+        color: #CBAA82;
+        letter-spacing: 3px;
+        border-radius: 4px;
+        transition: all 0.5s ease-out;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+
+    .map iframe {
+        width: 100%;
+    }
+
+    footer {
+        background: url(https://i.pinimg.com/736x/e8/a1/b0/e8a1b035e0d456aae3537591943912ec.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+
+    }
+
+    small {
+        display: inline-block;
+        padding: 40px 0;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .icons {
+        padding: 30px 0;
+    }
+
+    .icons a {
+        margin-right: 15px;
+    }
+
+    .contact-info .icons {
+        margin-left: 30px;
+    }
+
+    .contact-info .icons .fa-facebook {
+        background-color: #4064AC;
+    }
+
+    .contact-info .icons .fa-linkedin {
+        background-color: #0E72A3;
+    }
+
+    .footer-div {
+        background-color: rgba(0, 0, 0, 0.90);
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .fa {
+        padding: 7px;
+        font-size: 17px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-linkedin {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 50%;
+    }
+
+    .fa-envelope:hover {
+        pointer-events: none;
+    }
+
+    @media (max-width: 360px) {
+
+        .container {
+            width: 100%;
+        }
+
+        body {
+            font-size: 13px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-right: 0;
+        }
+
+        .menu a {
+            margin-right: 20px;
+        }
+
+        .menu a:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .section-contact-div {
+            margin-top: 40px;
+            padding: 100px 0 30px 0;
+        }
+
+        .section-contact-div h2 {
+            font-size: 25px;
+
+        }
+
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            margin: 0 0 20px 10px;
+        }
+
+        .contact-info div i {
+            margin: 10px 25px 0 0;
+            font-size: 24px;
+        }
+
+        .contact-info .icons {
+            margin: 15px 0 0 0;
+        }
+
+        .form-div {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 60px;
+
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-div {
+            grid-template-columns: 100%;
+        }
+
+        small {
+            padding-bottom: 15px;
+        }
+
+        .icons {
+            padding: 10px 0 10px 0;
+        }
+
+        .icons a {
+            margin-right: 15px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="menu">
+                <a href="index.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a id="active" href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-contact">
+        <div class="container">
+            <div class="section-contact-div">
+                <h2>Contact</h2>
+            </div>
+            <div class="form-div">
+                <div class="contact-form">
+                    <div>
+                        <form action="#">
+                            <input type="text" placeholder="First name">
+
+                            <input type="text" placeholder="Last name">
+
+                            <input type="email" placeholder="Email">
+
+                            <textarea name="" id="textarea" cols="30" rows="10" placeholder="Your message"></textarea>
+
+                            <button type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div><i class="fa fa-envelope"></i><a
+                            href="mailto:nerko.arn@gmail.com">nerko.arn@gmail.com</a></div>
+                    <div><i class="fa fa-phone-square"></i><a
+                            href="tel:+38762269652">+38762269652</a></div>
+                    <div><i class="fa fa-street-view" "></i>Banovići, Bosnia and Herzegovina</div>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/nermin.arn" class="fa fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/nermin-arnautovic/" class="fa fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45602.844102869756!2d18.532787!3d44.408998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475eb5ac94c8982d%3A0x794954d90f24fec2!2sBanovi%C4%87i%2C%20Bosna%20i%20Hercegovina!5e0!3m2!1shr!2sus!4v1646085332414!5m2!1shr!2sus"
+                width="1920" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-div">
+            <div>
+                <small>&#169; 2022 By Nermin Arnautovic.</small>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/nermin.arn" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/nermin-arnautovic/" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+    </footer>
+</body>
